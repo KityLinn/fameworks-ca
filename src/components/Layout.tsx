@@ -1,10 +1,15 @@
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
-export function Header() {
-  return (
-    <>
-      <Navbar className="bg-white shadow-sm mb-3">
+type layoutProps = {
+  children: JSX.Element
+}
+
+export function Layout({ children }: layoutProps) {
+
+    return (
+        <>
+        <Navbar className="bg-white shadow-sm mb-3">
         <Container>
           <Nav>
             <Nav.Link to="/" as={NavLink}>
@@ -36,6 +41,8 @@ export function Header() {
           </Button>
         </Container>
       </Navbar>
-    </>
-  );
-}
+      {children}
+      <Container>Footer</Container>
+        </>
+    )
+ }

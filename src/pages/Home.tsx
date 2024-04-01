@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Col, Row } from "react-bootstrap";
 
 export function Home() {
     const url =  "https://v2.api.noroff.dev/online-shop"
@@ -14,5 +15,12 @@ export function Home() {
   }, []);
 
 
-    return <h1>Home</h1>
+    return (
+    <>
+    <h1>My Store</h1>
+    <Row lg ={3} md = {2} xs = {1}>
+    </Row>
+    
+    </>
+    )
 }
