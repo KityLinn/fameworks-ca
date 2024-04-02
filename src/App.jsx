@@ -1,12 +1,12 @@
-import {Routes, Route} from "react-router-dom"
-import { Container } from "react-bootstrap"
-import { Home } from "./pages/Home"
-import { Contact } from "./pages/Contact"
-import { Product } from "./pages/Product"
-import { Checkout } from "./pages/Checkout"
-import { CheckoutSuccess } from "./pages/CheckoutSuccess"
-import {Layout} from "./components/Layout"
+import {Routes, Route} from "react-router-dom";
+import { Home } from "./pages/Home.jsx";
+import { Layout } from "./components/Layout.jsx";
+import { Contact } from "./pages/Contact.jsx";
+import { Product } from "./pages/Product.jsx";
+import { Checkout } from "./pages/Checkout.jsx";
+import { CheckoutSuccess } from "./pages/CheckoutSuccess.jsx";
 
+import { Container } from "react-bootstrap";
 
 function App() {
   return (

@@ -1,11 +1,7 @@
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
-type layoutProps = {
-  children: JSX.Element
-}
-
-export function Layout({ children }: layoutProps) {
+export function Layout({ children }) {
 
     return (
         <>
