@@ -16,11 +16,15 @@ export function Product() {
     }
     getData();
   }, []);
-  console.log(posts);
-
+  console.log(posts.image)
   return (
     <>
-    <h1>Test</h1>
+    <Row className="d-flex flex-column justify-content-center align-items-center mt-5">
+      <SingleProduct {...posts} />
+    </Row>
+
+
+
     </>
   );
 }
