@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { SingleProduct } from "../components/SingleProduct"
 
 export function Product() {
     const url =  "https://v2.api.noroff.dev/online-shop/?"
@@ -15,5 +16,9 @@ export function Product() {
     console.log(posts)
       
   }, []); 
-    return <h1>Product</h1>
+    return (
+      <>
+      <SingleProduct {...posts} />
+      </>
+    )
 }

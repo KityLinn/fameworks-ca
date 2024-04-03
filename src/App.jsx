@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Layout>
-        <Container>
+        <main className="container">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
@@ -20,7 +20,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/checkoutsuccess" element={<CheckoutSuccess />} />
           </Routes>
-        </Container>
+        </main>
       </Layout>
     </>
   );
