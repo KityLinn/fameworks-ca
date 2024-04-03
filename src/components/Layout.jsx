@@ -1,5 +1,5 @@
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export function Layout({ children }) {
   return (
@@ -39,35 +39,35 @@ export function Layout({ children }) {
       </Navbar>
       {children}
       <Container>
-        <footer class="py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-muted">
+        <footer className="py-3 my-4">
+          <ul className="nav justify-content-center border-bottom pb-3 mb-3">
+            <li className="nav-item">
+              <Link to="#" className="nav-link px-2 text-muted">
                 Home
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-muted">
+            <li className="nav-item">
+              <Link to="#" className="nav-link px-2 text-muted">
                 Features
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-muted">
+            <li className="nav-item">
+              <Link to="#" className="nav-link px-2 text-muted">
                 Pricing
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-muted">
+            <li className="nav-item">
+              <Link to="#" className="nav-link px-2 text-muted">
                 FAQs
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-muted">
+            <li className="nav-item">
+              <Link to="#" className="nav-link px-2 text-muted">
                 About
-              </a>
+              </Link>
             </li>
           </ul>
-          <p class="text-center text-muted">© 2024 Kitty-co</p>
+          <p className="text-center text-muted">© 2024 Kitty-co</p>
         </footer>
       </Container>
     </>
