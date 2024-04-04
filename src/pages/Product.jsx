@@ -26,9 +26,11 @@ export function Product() {
 
   useEffect(() => {
     localStorage.setItem("CARTITEMS", JSON.stringify(cartData))
+    window.dispatchEvent(new Event("storage"))
   }, [cartData])
 
   function addToCart(data) {
+    window.dispatchEvent(new Event("storage"))
     setcartData(currentCart => {
       return [
         ...currentCart,

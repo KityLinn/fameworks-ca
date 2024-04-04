@@ -10,9 +10,33 @@ export function Layout({ children }) {
     return JSON.parse(value).length
   })
 
+  useEffect(() => {
  
+    let cartString = localStorage.getItem("CARTITEMS");
+    if (cartString) {
+      let cart = JSON.parse(cartString);
+      if(Array.isArray(cart)) {
+        setcartvalue(cart.length);
+      }
+    }
 
+    function storageEventHandler(event) {
+      let cartString = localStorage.getItem("CARTITEMS");
+      if (cartString) {
+        let cart = JSON.parse(cartString);
+        if(Array.isArray(cart)) {
+          setcartvalue(cart.length);
+        }
+      }
+    }
+  
+    window.addEventListener("storage", storageEventHandler);
+    return () => {
 
+        window.removeEventListener("storage", storageEventHandler);
+    };
+  }, []);
+ 
 
 
   return (
