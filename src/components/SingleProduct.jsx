@@ -7,8 +7,8 @@ export function SingleProduct({ title, id, description, image, price, discounted
           <Card.Img
             variant="top"
             height="300px"
-            src={image.url}
-            alt={image.alt}
+            src={image?.url}
+            alt={image?.alt}
             style={{ objectFit: "cover" }}
           />
           <Card.Body className="d-flex flex-column">
