@@ -17,19 +17,19 @@ export function Product() {
     getData();
   }, []);
 
-  const [cartValue, setcartValue] = useState(() => {
-    const value = localStorage.getItem("CARTITEMS")
-    if (value == null) return []
+  const [cartData, setcartData] = useState(() => {
+    const data = localStorage.getItem("CARTITEMS")
+    if (data == null) return []
 
-    return JSON.parse(value)
+    return JSON.parse(data)
   })
 
   useEffect(() => {
-    localStorage.setItem("CARTITEMS", JSON.stringify(cartValue))
-  }, [cartValue])
+    localStorage.setItem("CARTITEMS", JSON.stringify(cartData))
+  }, [cartData])
 
   function addToCart(data) {
-    setcartValue(currentCart => {
+    setcartData(currentCart => {
       return [
         ...currentCart,
         {data},
