@@ -28,7 +28,7 @@ export function Product() {
     localStorage.setItem("CARTITEMS", JSON.stringify(cartValue))
   }, [cartValue])
 
-  function addTodo(data) {
+  function addToCart(data) {
     setcartValue(currentCart => {
       return [
         ...currentCart,
@@ -40,7 +40,7 @@ export function Product() {
   return (
     <>
     <Row className="d-flex flex-column justify-content-center align-items-center mt-5">
-      <SingleProduct {...posts} posts={posts} addTodo={addTodo} />
+      <SingleProduct {...posts} posts={posts} addToCart={addToCart} />
     </Row>
 
 
