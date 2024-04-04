@@ -1,6 +1,6 @@
 import { Button, Card, Row, Col } from "react-bootstrap";
 
-export function SingleProduct({ title, id, description, image, price, discountedPrice, rating, reviews}) {
+export function SingleProduct({ title, id, description, image, price, discountedPrice, rating, reviews, posts, addTodo}) {
     return (
       <>
         <Card className="h-100" style={{ maxWidth: "600px" }}>
@@ -20,6 +20,7 @@ export function SingleProduct({ title, id, description, image, price, discounted
             <Button
               className="mt-auto"
               variant="primary"
+              onClick={() => addTodo(posts)}
             >
               Add to cart
             </Button>

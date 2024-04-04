@@ -16,11 +16,31 @@ export function Product() {
     }
     getData();
   }, []);
-  console.log(posts.image)
+
+  const [cartValue, setcartValue] = useState(() => {
+    const value = localStorage.getItem("CARTITEMS")
+    if (value == null) return []
+
+    return JSON.parse(value)
+  })
+
+  useEffect(() => {
+    localStorage.setItem("CARTITEMS", JSON.stringify(cartValue))
+  }, [cartValue])
+
+  function addTodo(data) {
+    setcartValue(currentCart => {
+      return [
+        ...currentCart,
+        {data},
+      ]
+    })
+  }
+
   return (
     <>
     <Row className="d-flex flex-column justify-content-center align-items-center mt-5">
-      <SingleProduct {...posts} />
+      <SingleProduct {...posts} posts={posts} addTodo={addTodo} />
     </Row>
 
 

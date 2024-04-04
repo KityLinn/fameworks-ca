@@ -1,7 +1,20 @@
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export function Layout({ children }) {
+  const [cartValue, setcartvalue] = useState(() => {
+    const value = localStorage.getItem("CARTITEMS")
+    if (value == null) return 0
+
+    return JSON.parse(value).length
+  })
+
+ 
+
+
+
+
   return (
     <>
       <header>
@@ -33,7 +46,7 @@ export function Layout({ children }) {
                   transform: "translate(25%, 25%)",
                 }}
               >
-                1
+                <span>{cartValue}</span>
               </div>
             </Button>
           </Container>
