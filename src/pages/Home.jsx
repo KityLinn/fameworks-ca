@@ -5,24 +5,34 @@ import { StoreItem } from "../components/Storeitem.jsx";
 export function Home() {
   const url = "https://v2.api.noroff.dev/online-shop";
   const [posts, setPosts] = useState([]);
+  const [searchItems, setsearchItems] = useState([]);
   const [search, setSearch] = useState("");
   useEffect(() => {
     async function getData() {
       const response = await fetch(url);
       const json = await response.json();
       setPosts(json.data);
+      setsearchItems(json.data)
+      
     }
     getData();
   }, []);
-  console.log(posts);
 
 
  function searchFunc (e) {
   return setSearch(e.target.value)
-
  }
 
- console.log(search)
+ useEffect(()=> {
+  if (search) {
+    setPosts(searchItems.filter(p=>{
+        return p.title.includes(search)||p.description.includes(search);
+    }));
+  } else {
+    setPosts(searchItems);
+  }
+}, [search]);
+
  
 
   return (
