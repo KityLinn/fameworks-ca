@@ -11,7 +11,7 @@ export function Layout({ children }) {
   })
 
   useEffect(() => {
- 
+ /*
     let cartString = localStorage.getItem("CARTITEMS");
     if (cartString) {
       let cart = JSON.parse(cartString);
@@ -19,7 +19,7 @@ export function Layout({ children }) {
         setcartvalue(cart.length);
       }
     }
-
+*/
     function storageEventHandler(event) {
       let cartString = localStorage.getItem("CARTITEMS");
       if (cartString) {
@@ -56,6 +56,7 @@ export function Layout({ children }) {
               style={{ width: "3rem", height: "3rem", position: "relative" }}
               variant="outline-primary"
               className="rounded-circle"
+              href="/checkout"
             >
               hi
               <div

@@ -4,7 +4,7 @@ import { Button, Card } from "react-bootstrap"
 export function StoreItem({ title, id, description, image, price }) {
     return (
         <>
- <Card className="h-100">
+ <Card border="primary" className="h-100">
       <Card.Img
         variant="top"
         src={image.url}

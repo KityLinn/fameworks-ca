@@ -30,7 +30,7 @@ export function Product() {
   }, [cartData])
 
   function addToCart(data) {
-    window.dispatchEvent(new Event("storage"))
+
     setcartData(currentCart => {
       return [
         ...currentCart,
