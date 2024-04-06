@@ -1,21 +1,21 @@
-import { Card } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 
 
-export function Cartitem({ title, id, description, image, price, discountedPrice, rating, reviews, posts, addToCart}) {
+export function Cartitem({ items }) {
     return (
       <>
-        <Card className="h-100" style={{ maxWidth: "600px" }}>
+        <Card key={items.data.id} className="h-100" style={{ maxWidth: "300px" }}>
           <Card.Img
             variant="top"
             height="250px"
-            src={image?.url}
-            alt={image?.alt}
+            src={items.data.image?.url}
+            alt={items.data.image?.alt}
             style={{ objectFit: "cover" }}
           />
           <Card.Body className="d-flex flex-column">
             <Card.Title className="d-flex mb-4 flex-column">
-              <span className="fs-5 mb-5">{title}</span>
-              <span className="fs-5">Price: {price}kr </span>
+              <span className="fs-5 mb-5">{items.data.title}</span>
+              <span className="fs-5">Price: {items.data.price}kr </span>
             </Card.Title>
           </Card.Body>
         </Card>

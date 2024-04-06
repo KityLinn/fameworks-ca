@@ -14,12 +14,10 @@ export function Checkout() {
 
     return (
         <>
-        <Row className="d-flex flex-column justify-content-center align-items-center mt-5 g-3">
+        <Row className="d-flex flex-column justify-content-center align-items-center mt-5 g-3 w-100">
         {cartData.map((items) => {
           return (
-            <Col key={items.id}>
-              <Cartitem {...items} />
-            </Col>
+              <Cartitem items={items} />
           );
         })}
         </Row>
