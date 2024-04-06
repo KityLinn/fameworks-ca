@@ -3,12 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export function Layout({ children }) {
-  const [cartValue, setcartvalue] = useState(() => {
-    const value = localStorage.getItem("CARTITEMS")
-    if (value == null) return 0
-
-    return JSON.parse(value).length
-  })
+  const [cartValue, setcartvalue] = useState(0);
 
   useEffect(() => {
  /*
@@ -20,16 +15,20 @@ export function Layout({ children }) {
       }
     }
 */
-    function storageEventHandler(event) {
+    function storageEventHandler() {
       let cartString = localStorage.getItem("CARTITEMS");
       if (cartString) {
         let cart = JSON.parse(cartString);
-        if(Array.isArray(cart)) {
-          setcartvalue(cart.length);
+        let numberOfItems = 0;
+        try {
+          Object.keys(cart).forEach(key => numberOfItems += cart[key].amount) 
+        }catch (e) {
+          //cart isnt created correctly
         }
+        setcartvalue(numberOfItems);
       }
     }
-  
+    storageEventHandler();
     window.addEventListener("storage", storageEventHandler);
     return () => {
 

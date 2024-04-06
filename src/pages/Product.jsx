@@ -18,9 +18,8 @@ export function Product() {
   }, []);
 
   const [cartData, setcartData] = useState(() => {
-    const data = localStorage.getItem("CARTITEMS")
-    if (data == null) return []
-
+    const data = localStorage.getItem("CARTITEMS");
+    if (data == null) return {};
     return JSON.parse(data)
   })
 
@@ -29,13 +28,14 @@ export function Product() {
     window.dispatchEvent(new Event("storage"))
   }, [cartData])
 
-  function addToCart(data) {
-    setcartData(currentCart => {
-      return [
-        ...currentCart,
-        {data},
-      ]
-    })
+  function addToCart(data) { 
+    let newCart = Object.assign({}, cartData);
+      if (newCart[data.id]) {
+        newCart[data.id].amount = cartData[data.id].amount + 1;
+      } else {
+        newCart[data.id] = {item: data, amount:1};
+      }     
+    setcartData(newCart);
   }
 
 
