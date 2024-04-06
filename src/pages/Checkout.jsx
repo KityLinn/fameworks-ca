@@ -25,6 +25,8 @@ export function Checkout() {
     };
   }, []);
 
+  console.log(cartData)
+
   return (
     <>
       <Row className="d-flex flex-column justify-content-center align-items-center mt-5 g-3 w-100">

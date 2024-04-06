@@ -14,7 +14,13 @@ export function SingleProduct({ title, id, description, image, price, discounted
           <Card.Body className="d-flex flex-column">
             <Card.Title className="d-flex mb-4 flex-column">
               <span className="fs-5 mb-5">{title}</span>
-              <span className="fs-5">Price: {price}kr </span>
+              <span className="fs-5">Price: {discountedPrice?discountedPrice:price}kr </span>
+              {discountedPrice && discountedPrice!==price && 
+              <>
+                <span className="fs-6 text-decoration-line-through text-muted">Normal Price: {price}kr</span>
+                <span className="fs-4 text-red text-bold">Save: {price-discountedPrice}kr</span>
+              </>
+              }
             </Card.Title>
             <Card.Text>{description}</Card.Text>
             <Button
