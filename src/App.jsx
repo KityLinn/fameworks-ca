@@ -6,7 +6,6 @@ import { Product } from "./pages/Product.jsx";
 import { Checkout } from "./pages/Checkout.jsx";
 import { CheckoutSuccess } from "./pages/CheckoutSuccess.jsx";
 
-import { Container } from "react-bootstrap";
 
 function App() {
   return (
