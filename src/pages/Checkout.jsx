@@ -29,12 +29,13 @@ export function Checkout() {
 
   return (
     <>
-      <Row className="d-flex flex-column justify-content-center align-items-center mt-5 g-3 w-100">
+      <Row className="d-flex flex-column justify-content-center align-items-center mt-5 g-3">
       {Object.keys(cartData).map((key) => {
         return (
             <Cartitem items={cartData[key]} key={key}/>
         );
       })}
+      <div>test</div>
       </Row>
     </>
   );

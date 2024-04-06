@@ -5,7 +5,7 @@ export function Cartitem({items:{item, amount}}) {
 
     return (
       <>
-        <Card key={item.id} className="h-100 d-flex flex-row border-black border-2" style={{ maxWidth: "400px" }}>
+        <Card key={item.id} className="h-100 d-flex flex-row border-black border-2 p-3" style={{ maxWidth: "400px" }}>
           <Card.Img
             variant="top"
             height="140px"
