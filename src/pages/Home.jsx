@@ -20,13 +20,13 @@ export function Home() {
 console.log(posts)
 
  function searchFunc (e) {
-  return setSearch(e.target.value)
+  return setSearch(e.target.value.toLowerCase())
  }
 
  useEffect(()=> {
   if (search) {
     setPosts(searchItems.filter(p=>{
-        return p.title.includes(search)||p.description.includes(search);
+        return p.title.toLowerCase().includes(search)||p.description.toLowerCase().includes(search);
     }));
   } else {
     setPosts(searchItems);
