@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { SingleProduct } from "../components/SingleProduct.jsx";
 
 
@@ -44,9 +44,6 @@ export function Product() {
     <Row className="d-flex flex-column justify-content-center align-items-center mt-5">
       <SingleProduct {...posts} posts={posts} addToCart={addToCart}  />
     </Row>
-
-
-
     </>
   );
 }

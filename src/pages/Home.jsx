@@ -17,7 +17,7 @@ export function Home() {
     }
     getData();
   }, []);
-
+console.log(posts)
 
  function searchFunc (e) {
   return setSearch(e.target.value)
