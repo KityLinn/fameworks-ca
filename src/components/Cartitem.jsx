@@ -5,10 +5,10 @@ export function Cartitem({items:{item, amount}}) {
 
     return (
       <>
-        <Card key={item.id} className="h-100 d-flex flex-row" style={{ maxWidth: "400px" }}>
+        <Card key={item.id} className="h-100 d-flex flex-row border-black border-2" style={{ maxWidth: "400px" }}>
           <Card.Img
             variant="top"
-            height="100px"
+            height="140px"
             src={item.image?.url}
             alt={item.image?.alt}
             style={{ objectFit: "cover" }}
