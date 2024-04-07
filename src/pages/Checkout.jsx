@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { Cartitem } from "../components/Cartitem.jsx"
+import {  Link } from "react-router-dom";
  
 export function Checkout() {
   const [cartData, setcartData] = useState(() => {
@@ -49,7 +50,10 @@ export function Checkout() {
           <h2 className="fs-5">Your Cart Total</h2>
           <span><p className="fw-bold fs-6">Your total: {cartTotal}</p></span>
         </div>
-        <Button href= {"/checkoutsuccess"} className="mt-5 p-2" variant="primary" style={{ maxWidth: "200px" }}>Click to pay</Button>
+        <Link to= "/checkoutsuccess">
+           <Button className="mt-5 p-2" variant="primary" style={{ maxWidth: "200px" }}>Click to pay</Button>
+        </Link>
+        
       </Row>
     </>
   );

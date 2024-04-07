@@ -1,5 +1,5 @@
 import { Button, Card } from "react-bootstrap"
-
+import {  Link } from "react-router-dom";
 
 export function StoreItem({ title, id, description, image, price, discountedPrice }) {
     return (
@@ -20,7 +20,10 @@ export function StoreItem({ title, id, description, image, price, discountedPric
         <Card.Text>
           {description}
         </Card.Text>
-        <Button href= {"/product/" + id} className="mt-auto" variant="primary">Checkout product</Button>
+        <Link to= {"/product/" + id} >
+           <Button className="mt-auto" variant="primary">Checkout product</Button>
+        </Link>
+       
       </Card.Body>
     </Card>
         </>
