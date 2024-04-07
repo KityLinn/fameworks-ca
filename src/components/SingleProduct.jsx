@@ -33,10 +33,10 @@ export function SingleProduct({ title, id, description, image, price, discounted
           </Button>
         </Card.Body>
         <Card.Footer>
-          <Col>
-            <Row>
+          <Row>
+            <Col>
               <span className="fs-5"><Staricon />{rating}/10</span>
-            </Row>
+            </Col>
             {reviews && (
               <>
                 <Row>
@@ -46,20 +46,19 @@ export function SingleProduct({ title, id, description, image, price, discounted
                 
                   reviews.map(r=> {
                   return (
-                    <>
-                    <hr></hr>
+                    <div key={r.id}>
                       <Row>
                         <Col><span className="fw-bold">{r.username}</span></Col><Col className="d-flex justify-content-end"><span><Staricon />{r.rating}/10</span></Col>
                       </Row>
                       <Row>
                         <Col>{r.description}</Col>
                       </Row>
-                    </>
+                    </div>
                   );})
                 }
               </>
             )}
-          </Col>
+          </Row>
         </Card.Footer>
       </Card>
     </>
