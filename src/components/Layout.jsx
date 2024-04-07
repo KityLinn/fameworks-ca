@@ -1,6 +1,8 @@
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Carticon } from "../assets/cart.jsx"
+
 
 export function Layout({ children }) {
   const [cartValue, setcartvalue] = useState(0);
@@ -57,7 +59,7 @@ export function Layout({ children }) {
               className="rounded-circle"
               href="/checkout"
             >
-              hi
+              <span><Carticon /></span>
               <div
                 className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
                 style={{
