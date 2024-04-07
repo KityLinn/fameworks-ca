@@ -4,6 +4,7 @@ import { Button, Card, Row, Col } from "react-bootstrap";
 export function CheckoutSuccess() {
   useEffect(() => {
     localStorage.setItem("CARTITEMS", JSON.stringify({}));
+    window.dispatchEvent(new Event("storage"))
   }, []);
 
   return (
