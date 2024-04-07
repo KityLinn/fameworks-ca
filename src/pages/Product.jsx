@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Row } from "react-bootstrap";
 import { SingleProduct } from "../components/SingleProduct.jsx";
+import { Staricon } from "../assets/staricon.jsx"
 
 
 export function Product() {

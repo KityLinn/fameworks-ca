@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Carticon } from "../assets/cart.jsx"
+import { Carticon } from "../assets/carticon.jsx"
 
 
 export function Layout({ children }) {
