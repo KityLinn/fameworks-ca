@@ -49,7 +49,7 @@ export function Checkout() {
           <h2 className="fs-5">Your Cart Total</h2>
           <span><p className="fw-bold fs-6">Your total: {cartTotal}</p></span>
         </div>
-        <Button href= {"/checkoutsuccess"} className="mt-5 p-2" variant="primary" style={{ maxWidth: "200px" }}>Checkout product</Button>
+        <Button href= {"/checkoutsuccess"} className="mt-5 p-2" variant="primary" style={{ maxWidth: "200px" }}>Click to pay</Button>
       </Row>
     </>
   );
