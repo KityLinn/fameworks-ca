@@ -53,28 +53,31 @@ export function Layout({ children }) {
                 Contact
               </Nav.Link>
             </Nav>
-            <Button
-              style={{ width: "3rem", height: "3rem", position: "relative" }}
-              variant="outline-primary"
-              className="rounded-circle"
-              href="/checkout"
-            >
-              <span><Carticon /></span>
-              <div
-                className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
-                style={{
-                  color: "white",
-                  width: "1.5rem",
-                  height: "1.5rem",
-                  position: "absolute",
-                  bottom: 0,
-                  right: 0,
-                  transform: "translate(25%, 25%)",
-                }}
+            <Link to="/checkout">
+              <Button
+                style={{ width: "3rem", height: "3rem", position: "relative" }}
+                variant="outline-primary"
+                className="rounded-circle"
               >
-                <span>{cartValue}</span>
-              </div>
-            </Button>
+                <span>
+                  <Carticon />
+                </span>
+                <div
+                  className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
+                  style={{
+                    color: "white",
+                    width: "1.5rem",
+                    height: "1.5rem",
+                    position: "absolute",
+                    bottom: 0,
+                    right: 0,
+                    transform: "translate(25%, 25%)",
+                  }}
+                >
+                  <span>{cartValue}</span>
+                </div>
+              </Button>
+            </Link>
           </Container>
         </Navbar>
       </header>
