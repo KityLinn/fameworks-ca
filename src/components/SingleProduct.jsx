@@ -19,7 +19,7 @@ export function SingleProduct({ title, id, description, image, price, discounted
             {discountedPrice && discountedPrice!==price && 
             <>
               <span className="fs-6 text-decoration-line-through text-muted">Normal Price: {price}kr</span>
-              <span className="fs-4 text-danger font-weight-bold">Save: {price-discountedPrice}kr</span>
+              <span className="fs-4 text-danger font-weight-bold">Save: {(price-discountedPrice).toLocaleString(undefined, { maximumFractionDigits: 2, minimumFractionDigits: 2 })}kr</span>
             </>
             }
           </Card.Title>
