@@ -8,15 +8,7 @@ export function Layout({ children }) {
   const [cartValue, setcartvalue] = useState(0);
 
   useEffect(() => {
- /*
-    let cartString = localStorage.getItem("CARTITEMS");
-    if (cartString) {
-      let cart = JSON.parse(cartString);
-      if(Array.isArray(cart)) {
-        setcartvalue(cart.length);
-      }
-    }
-*/
+
     function storageEventHandler() {
       let cartString = localStorage.getItem("CARTITEMS");
       if (cartString) {
