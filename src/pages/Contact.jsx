@@ -69,7 +69,7 @@ export function Contact() {
               placeholder="Body"
               {...register('bodyFull', {
                 minLength: {value: 3,
-                  message: "Body name must be more than 3 characters" }
+                  message: "Body must be more than 3 characters" }
               })}
             />
             <p>{errors.bodyFull?.message}</p>
